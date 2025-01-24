@@ -1,0 +1,16 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "The Odin Project's Mini Message Board project involves building a simple web application where users can post and view messages. It focuses on implementing basic CRUD functionality, working with forms, storing data, and enhancing backend skills using Node.js and Express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anup Banskota",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
