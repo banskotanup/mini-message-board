@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(2, 2, 26);
+    color: white;
+    font-family: "Roboto", serif;
+    overflow: hidden;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-color: rgb(3, 3, 36);
+    height: 80px;
+}
+
+.logo-text{
+    margin-left: 12%;
+    padding: 25px;
+    font-family: "Jersey 10", serif;
+}
+
+.btn-new-msg{
+    margin-left: 35%;
+    padding: 25px;
+    font-family: "Jersey 10", serif;
+}
+
+.btn-new{
+    height: 35px;
+    width: 130px;
+    background-color: rgb(0, 200, 200);
+    border: 1px solid rgb(0, 200, 200);
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-new:hover{
+    background-color: rgb(75, 0, 130);
+    border: 1px solid rgb(75, 0, 130);
+    color: white;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.left{
+    height: 120px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-left: 5px solid rgb(255, 165, 0);
+    border-radius: 10px;
+    background-color: rgb(3, 3, 54);
+    overflow:auto;
+}
+
+.left h4{
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.left p{
+    padding: 10px;
+    color: gray;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    margin-right: 10%;
+}
+
+.pagination-btn {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #eee;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.pagination-btn.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.pagination-btn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+.footer{
+    background-color: rgb(3, 3, 36);
+    height: 80px;
+    position: relative;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.footer p{
+    padding: 30px;
+    color: gray;
+}
+
+.form-container{
+    margin-top: 10px;
+    margin-left: 20%;
+}
+
+.head-text{
+    padding: 10px;
+}
+
+.auth-name, .msg, .btn{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+.auth-name label{
+    font-weight: 600;
+}
+
+.auth-name input{
+    margin-top: 10px;
+    height: 40px;
+    padding: 10px;
+}
+
+.auth-name input:valid{
+    color: green;
+}
+
+.auth-name input:invalid{
+    color: red;
+}
+
+.msg label{
+    font-weight: 600;
+}
+
+.msg textarea{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.msg textarea:valid{
+    color: green;
+}
+
+.msg textarea:invalid{
+    color: red;
+}
+
+.btn button{
+    height: 40px;
+    background-color: teal;
+    color: white;
+    font-weight: 400;
+    border: 1 px solid teal;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn button:hover{
+    background-color:aquamarine;
+    color: black;
+}

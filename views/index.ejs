@@ -1,9 +1,35 @@
 <html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+15&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
     <body>
-        <% for(let i = 0; i < message.length; i++) { %>
-            <h1> <%= message[i].user %></h1>
-            <p> <%= message[i].text %></p>
-            <p> <%= message[i].added %></p>
-        <% } %>    
+        <%- include("header") %>
+
+        <div class="main">
+            <% for(let i = 0; i < message.length; i++) { %>
+                <div class="left">
+                    <h4><%= message[i].user %></h4>
+                    <p><%= message[i].text %></p>
+                    <p><%= message[i].added %></p>
+                    <p><%= message[i].time %></p>
+                </div>
+            <% } %>
+        </div> 
+        <div class="pagination">
+            <% if (currentPage > 1) { %>
+                <a href="/?page=<%= currentPage - 1 %>" class="pagination-btn">Previous</a>
+            <% } %>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+                <a href="/?page=<%= i %>" class="pagination-btn <%= i === currentPage ? 'active' : '' %>"><%= i %></a>
+            <% } %>
+            <% if (currentPage < totalPages) { %>
+                <a href="/?page=<%= currentPage + 1 %>" class="pagination-btn">Next</a>
+            <% } %>
+        </div>  
+
+        <%- include("footer") %>
     </body>
 </html>

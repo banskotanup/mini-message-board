@@ -1,12 +1,39 @@
 <html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+15&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css">
+    </head>
     <body>
+        <%- include("header") %>
+
         <form action="/new" method="post">
-            <h1>Leave a message here</h1>
-            <label for="authorName">Author Name </label>
-            <input type="text" name="messageUser" placeholder="Author Name">
-            <label for="message">Message</label>
-            <textarea name="messageText" id="message" cols="80" rows="20"></textarea>
-            <button type="submit">Submit</button>
+            <div class="form-container">
+                <div class="head-text">
+                    <h1>Leave a message here</h1>
+                </div>
+                <div class="auth-name">
+                    <label for="authorName">Author Name </label>
+                    <input type="text" name="messageUser" class="username" placeholder="Author Name" minlength="4" maxlength="20">
+                </div>
+                <div class="msg">
+                    <label for="message">Message</label>
+                    <textarea name="messageText" id="message" cols="80" rows="18" minlength="20" maxlength="100"></textarea>
+                </div>
+                <div class="btn">
+                    <button class="btn-sub" type="submit">Submit</button>
+                </div>
+            </div>
         </form>
+
+        <%- include("footer") %>
+
+        <script>
+            const button = document.querySelector(".btn-sub");
+            button.addEventListener("click", ()=>{
+                alert("Message successfully submitted. ");
+            });
+        </script>
     </body>
 </html>
