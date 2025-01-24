@@ -1,5 +1,9 @@
 <html>
     <body>
-        <% message.forEach %>
+        <% for(let i = 0; i < message.length; i++) { %>
+            <h1> <%= message[i].user %></h1>
+            <p> <%= message[i].text %></p>
+            <p> <%= message[i].added %></p>
+        <% } %>    
     </body>
 </html>
