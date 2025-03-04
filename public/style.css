@@ -101,13 +101,13 @@ body{
     color: #fff;
 }
 
-
 .footer{
     background-color: rgb(3, 3, 36);
     height: 80px;
-    position: sticky;
+    position: absolute sticky;
     text-align: center;
     margin-top: 7%;
+    bottom: 0;
 }
 
 .footer p{
