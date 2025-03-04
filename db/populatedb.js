@@ -14,10 +14,10 @@ const SQL = `
 async function main() {
     console.log("seeding...");
     const client = new Client({
-        host: "localhost",
+        host: "dpg-cv3hjqt6l47c73fe33dg-a",
         user: "sysadmin",
-        database: "minimessageboard",
-        password: "Stdy4drm",
+        database: "minimessageboard_loe0",
+        password: "FgMVU2ETiepIoADG98YBRpq0wdmkrWDl",
         port: 5432,
     });
 
