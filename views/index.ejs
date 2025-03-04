@@ -8,27 +8,28 @@
     <body>
         <%- include("header") %>
 
-        <div class="main">
-            <% for(let i = 0; i < message.length; i++) { %>
-                <div class="left">
-                    <h4><%= message[i].user %></h4>
-                    <p><%= message[i].text %></p>
-                    <p><%= message[i].added %></p>
-                    <p><%= message[i].time %></p>
-                </div>
-            <% } %>
-        </div> 
-        <div class="pagination">
-            <% if (currentPage > 1) { %>
-                <a href="/?page=<%= currentPage - 1 %>" class="pagination-btn">Previous</a>
-            <% } %>
-            <% for (let i = 1; i <= totalPages; i++) { %>
-                <a href="/?page=<%= i %>" class="pagination-btn <%= i === currentPage ? 'active' : '' %>"><%= i %></a>
-            <% } %>
-            <% if (currentPage < totalPages) { %>
-                <a href="/?page=<%= currentPage + 1 %>" class="pagination-btn">Next</a>
-            <% } %>
-        </div>  
+        <%if(locals.message) {%>
+            <div class="main">
+                <% message.forEach(message => { %>
+                    <div class="left">
+                        <h4><%= message.username %></h4>
+                        <p><%= message.messages %></p>
+                        <p><%= message.created_at %></p>
+                    </div>
+                <% }); %>
+            </div> 
+            <div class="pagination">
+                <% if (currentPage > 1) { %>
+                    <a href="/?page=<%= currentPage - 1 %>" class="pagination-btn">Previous</a>
+                <% } %>
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                    <a href="/?page=<%= i %>" class="pagination-btn <%= i === currentPage ? 'active' : '' %>"><%= i %></a>
+                <% } %>
+                <% if (currentPage < totalPages) { %>
+                    <a href="/?page=<%= currentPage + 1 %>" class="pagination-btn">Next</a>
+                <% } %>
+            </div>  
+        <%}%>
 
         <%- include("footer") %>
     </body>
