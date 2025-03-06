@@ -104,7 +104,8 @@ body{
 .footer{
     background-color: rgb(3, 3, 36);
     height: 80px;
-    position: absolute sticky;
+    position: -webkit-sticky;
+    position: sticky;
     text-align: center;
     margin-top: 7%;
     bottom: 0;
